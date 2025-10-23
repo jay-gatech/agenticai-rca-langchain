@@ -9,11 +9,6 @@ Production-grade multi-agent AI system for automated root cause analysis in dist
 - Full Kubernetes integration
 - OpenTelemetry observability
 
-## Quick Start
-See [docs/deployment.md](docs/deployment.md)
-
-## Architecture
-See [docs/architecture.md](docs/architecture.md)
 
 ## Citation
 ```bibtex
