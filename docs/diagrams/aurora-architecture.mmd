@@ -1,9 +1,3 @@
-# AURORA Architecture Diagram
-
-Below diagram is rendered via Mermaid (GitHub renders this automatically).  
-It reflects the multi‑agent design, observability stack, human‑in‑the‑loop, and runtime assumptions described in the attached paper.
-
-```mermaid
 %% AURORA System Architecture (from AgenticRCA paper)
 flowchart LR
   subgraph Observability["Observability Plane"]
@@ -81,6 +75,3 @@ flowchart LR
 
   classDef plane fill:#f8fafc,stroke:#94a3b8,stroke-width:1px;
   class Observability,Agents,Data,Runtime,Human,API plane;
-```
-
-> Source: Derived from the attached AURORA/AgenticRCA research paper (see repository root for citation).
