@@ -1,0 +1,12 @@
+# NOTE: Complete compose file referenced in deployment-guide.md.
+version: "3.9"
+services:
+  aurora:
+    build:
+      context: .
+      dockerfile: deployment/docker/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - LOG_LEVEL=INFO
+    command: ["uvicorn", "aurora.api.main:app", "--host", "0.0.0.0", "--port", "8000"]

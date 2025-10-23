@@ -1,0 +1,32 @@
+# NOTE: Complete YAML referenced in deployment-guide.md (Section 4).
+# Placeholder manifest with minimal Deployment and Service.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aurora-rca
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aurora-rca
+  template:
+    metadata:
+      labels:
+        app: aurora-rca
+    spec:
+      containers:
+      - name: aurora-rca
+        image: aurora-rca:latest
+        ports:
+        - containerPort: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: aurora-rca
+spec:
+  selector:
+    app: aurora-rca
+  ports:
+  - port: 80
+    targetPort: 8000
